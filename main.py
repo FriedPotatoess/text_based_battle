@@ -1,7 +1,7 @@
 from character import Character
 
-hero = Character(name="Goku", health= 100, damage=5)
-enemy = Character(name="Frieza", health=100, damage=3)
+hero = Character(name="Goku", health= 100,)
+enemy = Character(name="Frieza", health=100,)
 
 while True:
     hero.attack(enemy)

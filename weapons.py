@@ -5,6 +5,8 @@ class Weapons:
         self.damage = damage
         self.value = value
         
+        
+        
 iron_sword = Weapons(name="Iron Sword", weapon_type="sharp", damage=5, value=10)
-short_bow = Weapons(name="Short Bow", weapon_type-"range", damage=4, value=8)
-unarmed = Weapons(name="Fist", weapon_type="blunt", damage=2, value=0)
+short_bow = Weapons(name="Short Bow", weapon_type="range", damage=4, value=8)
+fists = Weapons(name="Fists", weapon_type="blunt", damage=2, value=0)
