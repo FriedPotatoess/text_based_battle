@@ -7,4 +7,8 @@ class Character:
         self.health = health
         self.health_max = health
         self.damage = damage
+    
+    def attack(self, target) -> None:
+        target.health -= self.damage
+        
         
