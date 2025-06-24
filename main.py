@@ -1,7 +1,7 @@
-from character import Character
+from character import Hero, Enemy
 
-hero = Character(name="Goku", health= 100,)
-enemy = Character(name="Frieza", health=100,)
+hero = Hero(name="Goku", health= 100,)
+enemy = Enemy(name="Frieza", health=100,)
 
 while True:
     hero.attack(enemy)
@@ -9,3 +9,5 @@ while True:
     
     print(f"Health of {hero.name}: {hero.health}")
     print(f"Health of {enemy.name}: {enemy.health}")
+    
+    input()
