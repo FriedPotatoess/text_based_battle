@@ -1,5 +1,5 @@
 from weapons import fists
-from weapons import short_bow
+
 
 class Character:
     race = "Human"
@@ -20,6 +20,12 @@ class Character:
 class Hero(Character):
     def __init__(self, name: str, health: int) -> None:
         super().__init__(name=name, health=health)
+    def equip(self, weapon) -> None:
+        self.weapon = weapon
+        print (f"{self.name} equipped a {self.weapon.name}")
+        
+    def drop(self) -> None:
+        self.weapon = self.default_weapon
         
 class Enemy(Character):
     def __init__(self, name: str, health: int, weapon) -> None:
