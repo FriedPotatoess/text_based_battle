@@ -26,4 +26,4 @@ class HealthBar:
         
         
         self.is_colored = is_colored
-        self.color = color
+        self.color = self.colors.get(color) or self.colors["default"]
