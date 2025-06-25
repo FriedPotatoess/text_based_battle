@@ -1,7 +1,8 @@
 from character import Hero, Enemy
+from weapons import short_bow
 
 hero = Hero(name="Goku", health= 100,)
-enemy = Enemy(name="Frieza", health=100,)
+enemy = Enemy(name="Frieza", health=100, weapon=short_bow)
 
 while True:
     hero.attack(enemy)

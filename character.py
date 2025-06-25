@@ -1,4 +1,5 @@
 from weapons import fists
+from weapons import short_bow
 
 class Character:
     race = "Human"
@@ -14,13 +15,14 @@ class Character:
     def attack(self, target) -> None:
         target.health -= self.weapon.damage
         target.health = max(target.health, 0)
-        print(f"{self.name} dealth {self.weapon.damage} damage to {target.name}")
+        print(f"{self.name} dealth {self.weapon.damage} damage to {target.name} with a {self.weapon.name}")
         
 class Hero(Character):
     def __init__(self, name: str, health: int) -> None:
         super().__init__(name=name, health=health)
         
 class Enemy(Character):
-    def __init__(self, name: str, health: int) -> None:
+    def __init__(self, name: str, health: int, weapon) -> None:
         super().__init__(name=name, health=health)
+        self.weapon = weapon
         
