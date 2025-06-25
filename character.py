@@ -16,6 +16,7 @@ class Character:
     def attack(self, target) -> None:
         target.health -= self.weapon.damage
         target.health = max(target.health, 0)
+        target.health_bar.update()
         print(f"{self.name} dealth {self.weapon.damage} damage to {target.name} with a {self.weapon.name}")
         
 class Hero(Character):
@@ -23,7 +24,7 @@ class Hero(Character):
         super().__init__(name=name, health=health)
         
         self.default_weapon = self.weapon
-        self.heath_bar = HealthBar(self, color="green")
+        self.health_bar = HealthBar(self, color="green")
     
     def equip(self, weapon) -> None:
         self.weapon = weapon
@@ -39,6 +40,6 @@ class Enemy(Character):
         super().__init__(name=name, health=health)
         
         self.weapon = weapon
-        self.heath_bar = HealthBar(self, color="red")
+        self.health_bar = HealthBar(self, color="red")
 
         
