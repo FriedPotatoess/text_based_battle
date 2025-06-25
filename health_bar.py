@@ -28,4 +28,5 @@ class HealthBar:
         self.is_colored = is_colored
         self.color = self.colors.get(color) or self.colors["default"]
         
-    def update(self):
+    def update(self) -> None:
+        self.current_value = self.entity.health
