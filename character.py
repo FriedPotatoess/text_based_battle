@@ -20,12 +20,18 @@ class Character:
 class Hero(Character):
     def __init__(self, name: str, health: int) -> None:
         super().__init__(name=name, health=health)
+        
+        self.default_weapon = self.weapon
+    
+    
     def equip(self, weapon) -> None:
         self.weapon = weapon
         print (f"{self.name} equipped a {self.weapon.name}")
         
     def drop(self) -> None:
+        print(f"{self.name} dropped the {self.weapon.name}!")
         self.weapon = self.default_weapon
+        
         
 class Enemy(Character):
     def __init__(self, name: str, health: int, weapon) -> None:
