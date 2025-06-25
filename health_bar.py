@@ -27,3 +27,5 @@ class HealthBar:
         
         self.is_colored = is_colored
         self.color = self.colors.get(color) or self.colors["default"]
+        
+    def update(self):
